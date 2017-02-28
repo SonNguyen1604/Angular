@@ -3,9 +3,9 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-var app = angular.module('starter', ['ionic'])
+var app = angular.module('starter', ['ksSwiper','ionic'])
 
-  .run(function($ionicPlatform) {
+  .run(function($ionicPlatform,$http) {
     $ionicPlatform.ready(function() {
       if (window.cordova && window.cordova.plugins.Keyboard) {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -21,6 +21,16 @@ var app = angular.module('starter', ['ionic'])
         StatusBar.styleDefault();
       }
     });
+
+
+  //
+  //   $http ({
+  //         method: 'json',
+  //         url: 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=g&language…ponents=country:VN&sensor=true&key=AIzaSyATOX9rL_ULV-Q_e2kImu9wYgK2AToOteQ'
+  //       }).then(function successCallback(response) {
+  //
+  //         console.log(response);
+  //       })
   })
 
   .config(function($stateProvider, $urlRouterProvider) {
