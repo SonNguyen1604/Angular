@@ -25,7 +25,7 @@ var app = angular.module('starter', ['ksSwiper','ionic'])
 
   
      $http ({
-           method: 'get',
+           method: 'jsonp',
            url: 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=g&language…ponents=country:VN&sensor=true&key=AIzaSyATOX9rL_ULV-Q_e2kImu9wYgK2AToOteQ'
          }).then(function successCallback(response) {
   
