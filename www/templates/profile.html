@@ -1,6 +1,6 @@
-<ion-view>
+<ion-view view-title="profile">
     <ks-swiper-container swiper="swiper" override-parameters="{'slidesPerView': '3'}" id="slide-resize">
-        <ks-swiper-slide class="swiper-slide" ng-repeat="s in [1,2,3,4,5,6,7,8,9,10,11,12,13,14]">
+        <ks-swiper-slide class="swiper-slide" ng-repeat="s in [1,2,3,4,5,6]">
             <ion-content>
                 <div class="padding">
                     <div class="cover">
@@ -39,7 +39,7 @@
                                     <h3 class="title-bold">QUAN TÂM</h3>
                                 </div>
                                 <div class="care-list">
-                                    <button ng-click="applyThis()"
+                                    <button ng-click="applyThis(s)"
                                             class="button margin-top-5 button-outline button-positive button-clicked" ng-style="color">
                                         Thu ngân
                                     </button>
@@ -51,7 +51,7 @@
                                     <h3 class="title-bold">KINH NGHIỆM LÀM VIỆC</h3>
                                 </div>
                                 <div class="list experince">
-                                    <div class="item">
+                                    <div class="item item-text-wrap">
                                         <div class="company">
                                             <p>Company Name</p>
                                             <i class="icon ion-ios-arrow-right"></i>
@@ -59,7 +59,7 @@
                                         </div>
                                         <span>2014-2017</span>
                                     </div>
-                                    <div class="item">
+                                    <div class="item item-text-wrap">
                                         <div class="company">
                                             <p>Company Name</p>
                                             <i class="icon ion-ios-arrow-right"></i>
@@ -67,7 +67,7 @@
                                         </div>
                                         <span>2014-2017</span>
                                     </div>
-                                    <div class="item">
+                                    <div class="item item-text-wrap">
                                         <div class="company">
                                             <p>Company Name</p>
                                             <i class="icon ion-ios-arrow-right"></i>
@@ -75,7 +75,7 @@
                                         </div>
                                         <span>2014-2017</span>
                                     </div>
-                                    <div class="item">
+                                    <div class="item item-text-wrap">
                                         <div class="company">
                                             <p>Company Name</p>
                                             <i class="icon ion-ios-arrow-right"></i>
@@ -83,7 +83,7 @@
                                         </div>
                                         <span>2014-2017</span>
                                     </div>
-                                    <div class="item">
+                                    <div class="item item-text-wrap">
                                         <div class="company">
                                             <p>Company Name</p>
                                             <i class="icon ion-ios-arrow-right"></i>
@@ -91,7 +91,7 @@
                                         </div>
                                         <span>2014-2017</span>
                                     </div>
-                                    <div class="item">
+                                    <div class="item item-text-wrap">
                                         <div class="company">
                                             <p>Company Name</p>
                                             <i class="icon ion-ios-arrow-right"></i>

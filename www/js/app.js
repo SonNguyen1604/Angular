@@ -23,24 +23,44 @@ var app = angular.module('starter', ['ksSwiper','ionic'])
     });
 
 
-  //
-  //   $http ({
-  //         method: 'json',
-  //         url: 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=g&language…ponents=country:VN&sensor=true&key=AIzaSyATOX9rL_ULV-Q_e2kImu9wYgK2AToOteQ'
-  //       }).then(function successCallback(response) {
-  //
-  //         console.log(response);
-  //       })
+  
+     $http ({
+           method: 'get',
+           url: 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=g&language…ponents=country:VN&sensor=true&key=AIzaSyATOX9rL_ULV-Q_e2kImu9wYgK2AToOteQ'
+         }).then(function successCallback(response) {
+  
+           console.log(response);
+         })
   })
 
   .config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
 
-      .state('profile', {
-        url: '/profile',
-        templateUrl: 'templates/profile.html',
-        controller: 'myCtrl'
-      });
+      .state('tab', {
+          url: '/tab',
+          abstract: true,
+        templateUrl: 'templates/tabs.html',
+      })
 
-    $urlRouterProvider.otherwise('/profile');
+      .state('tab.profile', {
+          url: '/profile',
+          views:{
+              'profile':{
+                  templateUrl: 'templates/profile.html',
+                  controller: 'ProfileCtrl'
+              }
+          }
+      })
+
+      .state('tab.instagram', {
+          url: '/instagram',
+          views: {
+              'instagram': {
+                  templateUrl: 'templates/instagram.html',
+                  controller: 'InstagramCtrl'
+              }
+          }
+      })
+
+    $urlRouterProvider.otherwise('/tab/profile');
   })

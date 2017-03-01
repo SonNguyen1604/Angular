@@ -1,18 +1,17 @@
 "use strict";
 
-app.controller('myCtrl', function($scope) {
-    $scope.applyThis = function() {
-        console.log("Clicked");
-        $scope.color = {
-            'background-color': '#387ef5',
-            'color': 'white'
-        };
+app.controller('ProfileCtrl', function ($scope) {
+    $scope.applyThis = function (s) {
+        console.log(s);
+        //$scope.s.color = {
+        //    'background-color': '#387ef5',
+        //    'color': 'white'
+        //};
     }
-    $scope.swiper = {};
+})
 
-    $scope.onReadySwiper = function (swiper) {
-        
-    };
+.controller('InstagramCtrl', function ($scope) {
+
 })
 
 
@@ -35,7 +34,6 @@ $(window).resize(function () {
             slidesPerView: 1,
         })
     }
-    
+
 })
-        
-     
+
